@@ -2,5 +2,8 @@
   "dependencies": {
     "puppeteer": "^21.7.0"
   },
+  "scripts": {
+    "start": "node main.js"
+  },
   "type": "module"
 }
