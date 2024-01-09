@@ -23,7 +23,7 @@ const initialize = async () => {
 }
 
 const login = async (page) => {
-  await page.waitForXPath("//button[contains(text(), 'Login')]", { timeout: 10000 });
+  await page.waitForXPath("//button[contains(text(), 'Login')]", { timeout: 30000 });
 
   const loginButton = await page.$x("//button[contains(text(), 'Login')]");
 
@@ -40,31 +40,31 @@ const register = async (page) => {
   const submitTerm = '/html/body/div[3]/form/input';
   const submitChanges = '/html/body/div[3]/form/input[19]';
 
-  await page.waitForXPath(studentMenu, { timeout: 10000 });
+  await page.waitForXPath(studentMenu, { timeout: 30000 });
   const studentMenuButton = await page.$x(studentMenu)
   await studentMenuButton[0].click()
 
   await timeout(1000)
 
-  await page.waitForXPath(registrationMenu, { timeout: 10000 });
+  await page.waitForXPath(registrationMenu, { timeout: 30000 });
   const registrationMenuButton = await page.$x(registrationMenu)
   await registrationMenuButton[0].click()
 
   await timeout(1000)
 
-  await page.waitForXPath(addDropPage, { timeout: 10000 });
+  await page.waitForXPath(addDropPage, { timeout: 30000 });
   const addDropPageButton = await page.$x(addDropPage)
   await addDropPageButton[0].click()
 
   await timeout(1000)
 
-  await page.waitForXPath(submitTerm, { timeout: 10000 });
+  await page.waitForXPath(submitTerm, { timeout: 30000 });
   const submitTermButton = await page.$x(submitTerm)
   await submitTermButton[0].click()
 
   await timeout(1000)
 
-  await page.waitForXPath(submitChanges, { timeout: 10000 });
+  await page.waitForXPath(submitChanges, { timeout: 30000 });
 
   await page.evaluate(() => {
     window.scrollTo(0, document.body.scrollHeight);
