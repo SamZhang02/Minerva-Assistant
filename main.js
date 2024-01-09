@@ -1,7 +1,10 @@
 import puppeteer from 'puppeteer';
+import config from './config.json' assert { type: 'json' };
+
 
 const MINERVA = "https://horizon.mcgill.ca/"
-const COURSES = ['1905']
+const COURSES = config.courses
+const TIMEOUT = config.timeout
 
 const timeout = (ms) => {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -103,7 +106,7 @@ const run = async () => {
     await timeout(30000)
 
     await page.goto(MINERVA);
-    await timeout(60000 * 2) // every 2 minutes
+    await timeout(TIMEOUT) // every 2 minutes
 
     count++;
 

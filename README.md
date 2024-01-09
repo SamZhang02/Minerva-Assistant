@@ -12,7 +12,7 @@ npm i
 
 ## Configurations
 
-Add your desired courses' CRN and the timeout duration between every round of registration in `config.json`.
+Add your desired courses' CRN and the timeout duration (milliseconds) between every round of registration in `config.json`.
 
 
 ## Running
@@ -26,7 +26,7 @@ npm run start
 It will prompt you into Minerva's login page. Given that Minerva uses 2FA, the first login must be done manually. 
 Make sure to select Yes on the "Stay Signed In?" page, as the application runs subsequently on the same browser with login information cached.
 
-The default timeout for every round of registration.
+The default timeout for every round of registration is 2 minutes. 
 
 ## Disclaimers
 
